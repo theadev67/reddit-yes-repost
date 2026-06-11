@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Perceptual Hash Evasion Attack",
+  "version": "1.0",
+  "description": "Fast, non-ML demo of evasion attack demo against perceptual hashing algorithms.",
+  "action": {
+    "default_title": "Open Evasion Attack Demo"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": []
+}

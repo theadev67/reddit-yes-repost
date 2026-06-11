@@ -1,0 +1,6 @@
+- sample 21 comes from https://www.reddit.com/r/ProgrammerHumor/comments/xzkyqj/why_arent_you_playing_by_the_rules_of_the_game/
+- sample 31 comes from https://www.reddit.com/r/itookapicture/comments/fmek3i/itap_of_rush_hour_in_los_angeles_during_the_first/
+
+
+sample x2 is the transformed version. 
+transformed with all methods in the UI with settings slightly stronger than default. See interface.png for the settings used for the samples.

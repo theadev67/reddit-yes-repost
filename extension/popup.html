@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hash Evasion Attack</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Hash Evasion</h1>
+      <p>Non-ML adversarial attacks against standard image hashing</p>
+    </header>
+
+    <div class="layout">
+      <aside class="controls">
+        <div class="upload-section">
+          <label for="imageInput" class="upload-btn">Choose Image</label>
+          <input type="file" id="imageInput" accept="image/*" hidden />
+        </div>
+        
+        <div class="attack-controls">
+          <div class="control-group">
+            <div class="control-header">
+              <label class="toggle"><input type="checkbox" id="enableBlobs" checked><span class="slider"></span></label>
+              <span>Macro Blobs (aHash)</span>
+            </div>
+            <input type="range" id="intensityBlobs" min="1" max="100" value="10">
+          </div>
+          
+          <div class="control-group">
+            <div class="control-header">
+              <label class="toggle"><input type="checkbox" id="enableNoise" checked><span class="slider"></span></label>
+              <span>High Freq Noise (dHash)</span>
+            </div>
+            <input type="range" id="intensityNoise" min="1" max="100" value="20">
+          </div>
+
+          <div class="control-group">
+            <div class="control-header">
+              <label class="toggle"><input type="checkbox" id="enableShift" checked><span class="slider"></span></label>
+              <span>Shift Center</span>
+            </div>
+            <input type="range" id="intensityShift" min="1" max="50" value="10">
+          </div>
+
+          <div class="control-group">
+            <div class="control-header">
+              <label class="toggle"><input type="checkbox" id="enableRotate" checked><span class="slider"></span></label>
+              <span>Slight Rotation</span>
+            </div>
+            <input type="range" id="intensityRotate" min="1" max="50" value="5">
+          </div>
+          
+          <div class="control-group">
+            <div class="control-header">
+              <label class="toggle"><input type="checkbox" id="enableScale" checked><span class="slider"></span></label>
+              <span>Distort Scale</span>
+            </div>
+            <input type="range" id="intensityScale" min="1" max="50" value="15">
+          </div>
+        </div>
+
+        <button id="processBtn" class="action-btn" disabled>Apply Attack</button>
+        <button id="downloadBtn" class="action-btn secondary" disabled>Download Result</button>
+      </aside>
+      
+      <main class="preview">
+        <div class="canvas-container">
+          <h3>Original</h3>
+          <canvas id="canvasOriginal"></canvas>
+        </div>
+        <div class="canvas-container">
+          <h3>Attacked</h3>
+          <canvas id="canvasAttacked"></canvas>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
